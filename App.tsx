@@ -1,8 +1,11 @@
 import { SafeAreaView, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Home from './src/telas/Home';
-// import MelhoresProdutores from './src/telas/MelhoresProdutores';
+import MelhoresProdutores from './src/telas/MelhoresProdutores';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
@@ -10,8 +13,13 @@ export default function App() {
       <StatusBar />
 
       <NavigationContainer>
-        <Home />
-        {/* <MelhoresProdutores /> */}
+        <Tab.Navigator>
+          <Tab.Screen name="Home" component={Home} />
+          <Tab.Screen
+            name="Melhores Produtores"
+            component={MelhoresProdutores}
+          />
+        </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaView>
   );
