@@ -1,11 +1,9 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/core';
 
 import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import Texto from '../../../componentes/Texto';
 
 export default function Cesta({ detalhes, itens, produtor }) {
-  const navigation = useNavigation();
   const { nome, imagem, descricao, preco } = detalhes;
 
   return (
