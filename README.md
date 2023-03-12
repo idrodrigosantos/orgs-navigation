@@ -1,6 +1,6 @@
 # Orgs Navigation
 
-Description.
+This project implements the display screen of organic product producers, baskets of organic products, items from basket and  shopping the basket simulate.
 
 ## Prerequisites
 
