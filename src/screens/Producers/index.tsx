@@ -17,8 +17,8 @@ export function Producers({ bestProducers }) {
   const list = useProducers(bestProducers);
   const { titleProducers, buyMessage } = useTexts();
 
-  const namePurchase = route.params?.compra.nome;
-  const timestampPurchase = route.params?.compra.timestamp;
+  const namePurchase = route.params?.purchase.nome;
+  const timestampPurchase = route.params?.purchase.timestamp;
   const completeMessage = buyMessage?.replace('$NOME', namePurchase);
 
   useEffect(() => {

@@ -7,10 +7,10 @@ import { Summary } from '@/screens/Summary';
 
 const Stack = createNativeStackNavigator();
 
-export function ProducerRoutes({ MainComponent = Home }) {
+export function ProducerRoutes({ mainComponent = Home }) {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="HomeScreen" component={MainComponent} />
+      <Stack.Screen name="HomeScreen" component={mainComponent} />
       <Stack.Screen name="Producer" component={Producer} />
       <Stack.Screen name="Basket" component={Basket} />
       <Stack.Screen name="Summary" component={Summary} />

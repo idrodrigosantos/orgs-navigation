@@ -54,7 +54,7 @@ export const producers = {
             price: 'R$ 40,00',
             image: broccoli,
           },
-          itens: [
+          items: [
             {
               name: 'Brócolis',
               image: broccoli,
@@ -78,7 +78,7 @@ export const producers = {
             price: 'R$ 40,00',
             image: vegetables,
           },
-          itens: [
+          items: [
             {
               name: 'Tomate',
               image: tomato,
@@ -101,7 +101,7 @@ export const producers = {
             price: 'R$ 40,00',
             image: tomato,
           },
-          itens: [
+          items: [
             {
               name: 'Tomate',
               image: tomato,
@@ -129,7 +129,7 @@ export const producers = {
             price: 'R$ 40,00',
             image: potato,
           },
-          itens: [
+          items: [
             {
               name: 'Batata',
               image: potato,
@@ -144,7 +144,7 @@ export const producers = {
             price: 'R$ 40,00',
             image: broccoli,
           },
-          itens: [
+          items: [
             {
               name: 'Tomate',
               image: tomato,
@@ -172,7 +172,7 @@ export const producers = {
             price: 'R$ 40,00',
             image: asparagus,
           },
-          itens: [
+          items: [
             {
               name: 'Abóbora',
               image: pumpkin,
@@ -191,7 +191,7 @@ export const producers = {
             price: 'R$ 40,00',
             image: pumpkin,
           },
-          itens: [
+          items: [
             {
               name: 'Tomate',
               image: tomato,
@@ -219,7 +219,7 @@ export const producers = {
             price: 'R$ 40,00',
             image: cucumber,
           },
-          itens: [
+          items: [
             {
               name: 'Pepino',
               image: cucumber,
@@ -234,7 +234,7 @@ export const producers = {
             price: 'R$ 40,00',
             image: carrot02,
           },
-          itens: [
+          items: [
             {
               name: 'Brócolis',
               image: broccoli,

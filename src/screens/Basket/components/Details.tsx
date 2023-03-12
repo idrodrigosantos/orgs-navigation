@@ -33,7 +33,7 @@ export function Details({ name, description, price, producer }: DetailsProps) {
         style={styles.button}
         onPress={() =>
           navigation.navigate('Summary', {
-            compra: { name, timestamp: +new Date() },
+            purchase: { name, timestamp: +new Date() },
           })
         }
       >

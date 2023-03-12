@@ -18,8 +18,8 @@ export function Summary() {
     buyProducerButton,
   } = useTexts();
 
-  const purchase = route.params.compra;
-  const message = buyMessage?.replace('$NOME', purchase.nome);
+  const purchase = route.params?.purchase;
+  const message = buyMessage?.replace('$NOME', purchase.name);
 
   return (
     <View style={styles.screen}>
@@ -43,10 +43,7 @@ export function Summary() {
 
           <TouchableOpacity
             style={styles.button}
-            onPress={
-              () =>
-                navigation.popToTop() /* para mostrar mensagem na Home: navigation.navigate('HomeScreen', { compra }) */
-            }
+            onPress={() => navigation.popToTop()}
           >
             <Text style={styles.buttonText}>{homeBuyButton}</Text>
           </TouchableOpacity>
