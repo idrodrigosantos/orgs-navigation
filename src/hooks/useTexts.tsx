@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import { loadTexts } from '../services/loadData';
+import { loadTexts } from '@/services/loadData';
 
-export default function useTexts() {
+export function useTexts() {
   const [texts, setTexts] = useState({});
 
   useEffect(() => {

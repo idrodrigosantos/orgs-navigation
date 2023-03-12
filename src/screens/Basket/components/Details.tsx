@@ -1,22 +1,32 @@
-import React from 'react';
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Image, StyleSheet, View, TouchableOpacity } from 'react-native';
 
-import useTexts from '../../../hooks/useTexts';
-import CustomText from '../../../components/CustomText';
+import { CustomText } from '@/components/CustomText';
+import { useTexts } from '@/hooks/useTexts';
 
-export default function Details({ name, producer, description, price }) {
+interface DetailsProps {
+  name: string;
+  description: string;
+  producer: any;
+  price: string;
+}
+
+export function Details({ name, description, price, producer }: DetailsProps) {
   const navigation = useNavigation();
   const { buyButton } = useTexts();
 
   return (
     <>
       <CustomText style={styles.name}>{name}</CustomText>
+
       <View style={styles.farm}>
         <Image source={producer.image} style={styles.farmImage} />
+
         <CustomText style={styles.nameFarm}>{producer.name}</CustomText>
       </View>
+
       <CustomText style={styles.description}>{description}</CustomText>
+
       <CustomText style={styles.price}>{price}</CustomText>
 
       <TouchableOpacity

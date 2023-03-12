@@ -1,16 +1,15 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
-import ProducerRoutes from './ProducerRoutes';
-import BestProducersRoutes from './BestProducersRoutes';
+import { BestProducersRoutes } from './BestProducersRoutes';
+import { ProducerRoutes } from './ProducerRoutes';
 
-import Heart from '../assets/icons/heart.svg';
-import Home from '../assets/icons/home.svg';
+import Heart from '@/assets/icons/heart.svg';
+import Home from '@/assets/icons/home.svg';
 
 const Tab = createBottomTabNavigator();
 
-export default function AppRoutes() {
+export function AppRoutes() {
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -33,6 +32,7 @@ export default function AppRoutes() {
         })}
       >
         <Tab.Screen name="Home" component={ProducerRoutes} />
+
         <Tab.Screen
           name="Melhores Produtores"
           component={BestProducersRoutes}

@@ -1,17 +1,24 @@
-import React, { useState } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
 
-import Star from './Star';
+import { Star } from './Star';
 
-export default function Stars({
+interface StarsProps {
+  amount: number;
+  editable?: boolean;
+  bigStar?: boolean;
+}
+
+export function Stars({
   amount: originalAmount,
   editable = false,
   bigStar = false,
-}) {
+}: StarsProps) {
   const [amount, setAmount] = useState(originalAmount);
 
   const RenderStars = () => {
     const starsList = [];
+
     for (let i = 0; i < 5; i++) {
       starsList.push(
         <Star

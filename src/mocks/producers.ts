@@ -1,24 +1,24 @@
-import green from '../assets/producers/green.png';
-import salad from '../assets/producers/salad.png';
-import jennyJack from '../assets/producers/jenny-jack.png';
-import grow from '../assets/producers/grow.png';
-import potager from '../assets/producers/potager.png';
+import green from '@/assets/producers/green.png';
+import salad from '@/assets/producers/salad.png';
+import jennyJack from '@/assets/producers/jenny-jack.png';
+import grow from '@/assets/producers/grow.png';
+import potager from '@/assets/producers/potager.png';
 
-import asparagus from '../assets/vegetables/asparagus.png';
-import tomato from '../assets/vegetables/tomato.png';
-import broccoli from '../assets/vegetables/broccoli.png';
-import potato from '../assets/vegetables/potato.png';
-import cucumber from '../assets/vegetables/cucumber.png';
-import pumpkin from '../assets/vegetables/pumpkin.png';
-import carrot01 from '../assets/vegetables/carrot01.png';
-import carrot02 from '../assets/vegetables/carrot02.png';
-import vegetables from '../assets/vegetables/vegetables.png';
+import asparagus from '@/assets/vegetables/asparagus.png';
+import tomato from '@/assets/vegetables/tomato.png';
+import broccoli from '@/assets/vegetables/broccoli.png';
+import potato from '@/assets/vegetables/potato.png';
+import cucumber from '@/assets/vegetables/cucumber.png';
+import pumpkin from '@/assets/vegetables/pumpkin.png';
+import carrot01 from '@/assets/vegetables/carrot01.png';
+import carrot02 from '@/assets/vegetables/carrot02.png';
+import vegetables from '@/assets/vegetables/vegetables.png';
 
-const generateRandomNumber = (min, max) => {
+const generateRandomNumber = (min: number, max: number) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-const producers = {
+export const producers = {
   list: [
     {
       id: 1,
@@ -253,5 +253,3 @@ const producers = {
     },
   ],
 };
-
-export default producers;

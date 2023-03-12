@@ -1,4 +1,4 @@
-const texts = {
+export const texts = {
   welcome: 'Olá Visitante',
   subtitle: 'Encontre os produtores mais próximos a você!',
   subtitleBestProducers: 'Veja os produtores com 4+ estrelas!',
@@ -15,5 +15,3 @@ const texts = {
   homeBuyButton: 'Voltar a Home',
   buyProducerButton: 'Voltar ao Produtor',
 };
-
-export default texts;

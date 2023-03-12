@@ -1,5 +1,5 @@
-import producers from '../mocks/producers';
-import texts from '../mocks/texts';
+import { producers } from '@/mocks/producers';
+import { texts } from '@/mocks/texts';
 
 export const loadProducers = () => {
   return producers;

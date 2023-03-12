@@ -1,10 +1,15 @@
-import React from 'react';
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
-import CustomText from '../../../components/CustomText';
+import { CustomText } from '@/components/CustomText';
 
-export default function Basket({ details, items, producer }) {
+interface BasketProps {
+  details;
+  items;
+  producer;
+}
+
+export function Basket({ details, items, producer }: BasketProps) {
   const navigation = useNavigation();
   const { name, image, description, price } = details;
 
@@ -20,7 +25,9 @@ export default function Basket({ details, items, producer }) {
 
         <View style={styles.texts}>
           <CustomText style={styles.name}>{name}</CustomText>
+
           <CustomText style={styles.description}>{description}</CustomText>
+
           <CustomText style={styles.price}>{price}</CustomText>
         </View>
       </View>
