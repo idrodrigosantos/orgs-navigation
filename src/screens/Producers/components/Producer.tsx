@@ -1,13 +1,13 @@
 import React, { useMemo } from 'react';
 import { View, TouchableOpacity, Text, Image, StyleSheet } from 'react-native';
 
-import Stars from '../../../components/Stars';
+import { Stars } from '../../../components/Stars';
 
 const distanceInMeters = (distance) => {
   return `${distance}m`;
 };
 
-export default function Producer({ name, image, distance, stars, onPress }) {
+export function Producer({ name, image, distance, stars, onPress }) {
   const distanceText = useMemo(() => distanceInMeters(distance), [distance]);
 
   return (
@@ -31,10 +31,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     borderRadius: 6,
     flexDirection: 'row',
-
     // Android
     elevation: 4,
-
     // iOS
     shadowColor: '#000',
     shadowOffset: {

@@ -2,14 +2,14 @@ import React from 'react';
 import { useRoute } from '@react-navigation/native';
 import { FlatList, StyleSheet, View } from 'react-native';
 
-import CustomText from '../../components/CustomText';
+import { CustomText } from '../../components/CustomText';
 
-import Top from '../../components/Top';
-import useTexts from '../../hooks/useTexts';
-import Details from './components/Details';
-import Item from './components/Item';
+import { Top } from '../../components/Top';
+import { useTexts } from '../../hooks/useTexts';
+import { Details } from './components/Details';
+import { Item } from './components/Item';
 
-export default function Basket() {
+export function Basket() {
   const route = useRoute();
   const { topBasket, titleItems } = useTexts();
 

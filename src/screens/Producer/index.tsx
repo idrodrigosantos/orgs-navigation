@@ -1,12 +1,12 @@
 import React from 'react';
 import { useRoute } from '@react-navigation/native';
 import { FlatList, Image, StyleSheet, Text, View } from 'react-native';
-import Basket from './components/Basket';
-import Top from '../../components/Top';
-import useTexts from '../../hooks/useTexts';
-import topImage from '../../assets/producers/top.png';
+import { Basket } from './components/Basket';
+import { Top } from '@/components/Top';
+import { useTexts } from '@/hooks/useTexts';
+import topImage from '@/assets/producers/top.png';
 
-export default function Producer() {
+export function Producer() {
   const route = useRoute();
   const { titleProducer, titleBasket } = useTexts();
   const { baskets, image, name } = route.params;

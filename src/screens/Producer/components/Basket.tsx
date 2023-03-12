@@ -2,9 +2,9 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
-import CustomText from '../../../components/CustomText';
+import { CustomText } from '../../../components/CustomText';
 
-export default function Basket({ details, items, producer }) {
+export function Basket({ details, items, producer }) {
   const navigation = useNavigation();
   const { name, image, description, price } = details;
 

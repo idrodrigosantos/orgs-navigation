@@ -6,8 +6,8 @@ import {
   GestureResponderEvent,
 } from 'react-native';
 
-import greenStar from '../assets/icons/green-star.png';
-import grayStar from '../assets/icons/gray-star.png';
+import greenStar from '@/assets/icons/green-star.png';
+import grayStar from '@/assets/icons/gray-star.png';
 
 interface StarProps {
   onPress: ((event: GestureResponderEvent) => void) | undefined;
@@ -16,7 +16,7 @@ interface StarProps {
   bigStar: boolean;
 }
 
-export default function Star({
+export function Star({
   onPress,
   disabled = true,
   filled,

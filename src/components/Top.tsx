@@ -2,20 +2,16 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
-import CustomText from './CustomText';
+import { CustomText } from './CustomText';
 
-import Gradient from '../assets/nav/gradient.svg';
-import topImage from '../assets/nav/vegetal.png';
-import BackSVG from '../assets/icons/back.svg';
+import Gradient from '@/assets/nav/gradient.svg';
+import topImage from '@/assets/nav/vegetal.png';
+import BackSVG from '@/assets/icons/back.svg';
 
 const width = Dimensions.get('screen').width;
 const STANDARD_HEIGHT = 270;
 
-export default function Top({
-  title,
-  image = topImage,
-  height = STANDARD_HEIGHT,
-}) {
+export function Top({ title, image = topImage, height = STANDARD_HEIGHT }) {
   const styles = stylesFunction(height);
   const navigation = useNavigation();
   return (

@@ -2,15 +2,15 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import ProducerRoutes from './ProducerRoutes';
-import BestProducersRoutes from './BestProducersRoutes';
+import { ProducerRoutes } from './ProducerRoutes';
+import { BestProducersRoutes } from './BestProducersRoutes';
 
-import Heart from '../assets/icons/heart.svg';
-import Home from '../assets/icons/home.svg';
+import Heart from '@/assets/icons/heart.svg';
+import Home from '@/assets/icons/home.svg';
 
 const Tab = createBottomTabNavigator();
 
-export default function AppRoutes() {
+export function AppRoutes() {
   return (
     <NavigationContainer>
       <Tab.Navigator

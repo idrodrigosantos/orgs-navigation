@@ -1,6 +1,6 @@
 import React from 'react';
-import Producers from './Producers';
+import { Producers } from './Producers';
 
-export default function Home() {
+export function Home() {
   return <Producers bestProducers={false} />;
 }

@@ -8,8 +8,8 @@ import {
   ImageProps,
 } from 'react-native';
 
-import useTexts from '../../../hooks/useTexts';
-import CustomText from '../../../components/CustomText';
+import { useTexts } from '../../../hooks/useTexts';
+import { CustomText } from '../../../components/CustomText';
 
 interface DetailsProps {
   name: string;
@@ -21,12 +21,7 @@ interface DetailsProps {
   button: string;
 }
 
-export default function Details({
-  name,
-  producer,
-  description,
-  price,
-}: DetailsProps) {
+export function Details({ name, producer, description, price }: DetailsProps) {
   const navigation = useNavigation();
   const { buyButton } = useTexts();
 

@@ -1,11 +1,9 @@
 import React, { PropsWithChildren } from 'react';
 import { View, Image, StyleSheet } from 'react-native';
 
-import CustomText from '../../../components/CustomText';
+import { CustomText } from '../../../components/CustomText';
 
-export default function Item({
-  item: { name, image },
-}: PropsWithChildren<any>) {
+export function Item({ item: { name, image } }: PropsWithChildren<any>) {
   return (
     <View style={styles.item}>
       <Image source={image} style={styles.image} />

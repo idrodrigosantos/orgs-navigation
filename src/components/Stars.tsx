@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import Star from './Star';
+import { Star } from './Star';
 
 interface StarsProps {
   amount: number;
@@ -9,7 +9,7 @@ interface StarsProps {
   bigStar: boolean;
 }
 
-export default function Stars({
+export function Stars({
   amount: originalAmount,
   editable = false,
   bigStar = false,

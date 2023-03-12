@@ -1,6 +1,6 @@
 import { SafeAreaView, StatusBar } from 'react-native';
 
-import AppRoutes from './src/routes/AppRoutes';
+import { AppRoutes } from './src/routes/AppRoutes';
 
 export default function App() {
   return (

@@ -6,7 +6,7 @@ interface CustomTextPros {
   style: any;
 }
 
-export default function CustomText({ children, style }: CustomTextPros) {
+export function CustomText({ children, style }: CustomTextPros) {
   let customStyle = styles.text;
 
   if (style.fontWeight === 'bold') {
