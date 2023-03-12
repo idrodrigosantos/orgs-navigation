@@ -1,15 +1,27 @@
 import React from 'react';
-import { TouchableOpacity, Image, StyleSheet } from 'react-native';
+import {
+  TouchableOpacity,
+  Image,
+  StyleSheet,
+  GestureResponderEvent,
+} from 'react-native';
 
 import greenStar from '../assets/icons/green-star.png';
 import grayStar from '../assets/icons/gray-star.png';
+
+interface StarProps {
+  onPress: ((event: GestureResponderEvent) => void) | undefined;
+  disabled: boolean;
+  filled: boolean;
+  bigStar: boolean;
+}
 
 export default function Star({
   onPress,
   disabled = true,
   filled,
   bigStar = false,
-}) {
+}: StarProps) {
   const styles = stylesFunction(bigStar);
 
   const getImage = () => {
@@ -26,7 +38,7 @@ export default function Star({
   );
 }
 
-const stylesFunction = (bigStar) =>
+const stylesFunction = (bigStar: boolean) =>
   StyleSheet.create({
     estrela: {
       width: bigStar ? 36 : 12,

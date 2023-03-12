@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import { loadProducers } from '../services/loadData';
 
-export default function useProducers(bestProducers) {
+export default function useProducers(bestProducers: any) {
   const [list, setList] = useState([]);
 
   useEffect(() => {

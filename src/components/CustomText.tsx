@@ -1,10 +1,15 @@
 import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 
-export default function CustomText({ children, style }) {
+interface CustomTextPros {
+  children: any;
+  style: any;
+}
+
+export default function CustomText({ children, style }: CustomTextPros) {
   let customStyle = styles.text;
 
-  if (style?.fontWeight === 'bold') {
+  if (style.fontWeight === 'bold') {
     customStyle = styles.boldText;
   }
 
@@ -13,11 +18,9 @@ export default function CustomText({ children, style }) {
 
 const styles = StyleSheet.create({
   text: {
-    // fontFamily: 'MontserratRegular',
     fontWeight: 'normal',
   },
   boldText: {
-    // fontFamily: 'MontserratBold',
     fontWeight: 'bold',
   },
 });

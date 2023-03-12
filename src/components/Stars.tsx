@@ -3,11 +3,17 @@ import { View, StyleSheet } from 'react-native';
 
 import Star from './Star';
 
+interface StarsProps {
+  amount: number;
+  editable: boolean;
+  bigStar: boolean;
+}
+
 export default function Stars({
   amount: originalAmount,
   editable = false,
   bigStar = false,
-}) {
+}: StarsProps) {
   const [amount, setAmount] = useState(originalAmount);
 
   const RenderStars = () => {

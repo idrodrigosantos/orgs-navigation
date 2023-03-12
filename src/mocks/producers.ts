@@ -14,7 +14,7 @@ import carrot01 from '../assets/vegetables/carrot01.png';
 import carrot02 from '../assets/vegetables/carrot02.png';
 import vegetables from '../assets/vegetables/vegetables.png';
 
-const generateRandomNumber = (min, max) => {
+const generateRandomNumber = (min: number, max: number) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
