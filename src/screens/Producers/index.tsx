@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FlatList, Text, StyleSheet } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
 
 import { Producer } from './components/Producer';
 import { Top } from './components/Top';
+
 import { useProducers } from '@/hooks/useProducers';
 import { useTexts } from '@/hooks/useTexts';
 

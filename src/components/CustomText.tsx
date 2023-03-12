@@ -1,13 +1,17 @@
-import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { ReactNode } from 'react';
+import { StyleSheet, Text } from 'react-native';
 
 interface CustomTextPros {
-  children: any;
+  children: ReactNode;
   style: any;
 }
 
+type customStyleProps = {
+  fontWeight: 'normal' | 'bold';
+};
+
 export function CustomText({ children, style }: CustomTextPros) {
-  let customStyle = styles.text;
+  let customStyle: customStyleProps = styles.text;
 
   if (style.fontWeight === 'bold') {
     customStyle = styles.boldText;

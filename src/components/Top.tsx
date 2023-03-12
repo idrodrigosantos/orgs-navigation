@@ -1,6 +1,5 @@
-import React from 'react';
+import { Dimensions, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
 import { CustomText } from './CustomText';
 
@@ -11,18 +10,32 @@ import BackSVG from '@/assets/icons/back.svg';
 const width = Dimensions.get('screen').width;
 const STANDARD_HEIGHT = 270;
 
-export function Top({ title, image = topImage, height = STANDARD_HEIGHT }) {
-  const styles = stylesFunction(height);
+interface TopProps {
+  title;
+  image?;
+  height?: number;
+}
+
+export function Top({
+  title,
+  image = topImage,
+  height = STANDARD_HEIGHT,
+}: TopProps) {
   const navigation = useNavigation();
+  const styles = stylesFunction(height);
+
   return (
     <>
       <Image source={image} style={styles.top} />
+
       <Gradient
         width={width}
         height={(130 / 360) * width}
         style={styles.gradient}
       />
+
       <CustomText style={styles.title}>{title}</CustomText>
+
       <TouchableOpacity
         onPress={() => {
           navigation.goBack();
@@ -35,7 +48,7 @@ export function Top({ title, image = topImage, height = STANDARD_HEIGHT }) {
   );
 }
 
-const stylesFunction = (height) =>
+const stylesFunction = (height: number) =>
   StyleSheet.create({
     top: {
       width: '100%',

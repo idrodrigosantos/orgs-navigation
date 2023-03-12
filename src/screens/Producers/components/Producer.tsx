@@ -1,21 +1,37 @@
-import React, { useMemo } from 'react';
-import { View, TouchableOpacity, Text, Image, StyleSheet } from 'react-native';
+import { useMemo } from 'react';
+import { Image, Text, TouchableOpacity, StyleSheet, View } from 'react-native';
 
-import { Stars } from '../../../components/Stars';
+import { Stars } from '@/components/Stars';
 
 const distanceInMeters = (distance) => {
   return `${distance}m`;
 };
 
-export function Producer({ name, image, distance, stars, onPress }) {
+interface ProducerProps {
+  name;
+  image;
+  distance;
+  stars;
+  onPress;
+}
+
+export function Producer({
+  name,
+  image,
+  distance,
+  stars,
+  onPress,
+}: ProducerProps) {
   const distanceText = useMemo(() => distanceInMeters(distance), [distance]);
 
   return (
     <TouchableOpacity style={styles.card} onPress={onPress}>
       <Image source={image} style={styles.image} accessibilityLabel={name} />
+
       <View style={styles.information}>
         <View>
           <Text style={styles.name}>{name}</Text>
+
           <Stars amount={stars} />
         </View>
         <Text style={styles.distance}>{distanceText}</Text>

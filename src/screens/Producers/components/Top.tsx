@@ -1,8 +1,8 @@
-import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
+
+import { useTexts } from '@/hooks/useTexts';
 
 import logo from '@/assets/nav/logo.png';
-import { useTexts } from '@/hooks/useTexts';
 
 export function Top({ bestProducers }) {
   const { welcome, subtitle, subtitleBestProducers } = useTexts();
@@ -11,7 +11,9 @@ export function Top({ bestProducers }) {
     <>
       <View style={styles.top}>
         <Image source={logo} style={styles.image} />
+
         <Text style={styles.welcome}>{bestProducers ? '' : welcome}</Text>
+
         <Text style={styles.subtitle}>
           {bestProducers ? subtitleBestProducers : subtitle}
         </Text>

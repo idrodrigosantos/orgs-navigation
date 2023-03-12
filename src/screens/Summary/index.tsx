@@ -1,6 +1,5 @@
-import React from 'react';
+import { Image, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import { useRoute, useNavigation } from '@react-navigation/native';
-import { Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
 
 import { useTexts } from '@/hooks/useTexts';
 
@@ -76,9 +75,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: '100%',
     height: 58,
-
     backgroundColor: '#fff',
-
     shadowColor: '#000',
     shadowOffset: {
       width: 0,
@@ -86,9 +83,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-
     elevation: 5,
-
     paddingVertical: 16,
     paddingHorizontal: 40,
   },

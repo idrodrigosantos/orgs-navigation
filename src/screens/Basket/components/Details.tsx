@@ -1,38 +1,32 @@
-import React from 'react';
+import { Image, StyleSheet, TouchableOpacity, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import {
-  Image,
-  StyleSheet,
-  View,
-  TouchableOpacity,
-  ImageProps,
-} from 'react-native';
 
-import { useTexts } from '../../../hooks/useTexts';
-import { CustomText } from '../../../components/CustomText';
+import { CustomText } from '@/components/CustomText';
+import { useTexts } from '@/hooks/useTexts';
 
 interface DetailsProps {
   name: string;
-  farmLogo: Readonly<ImageProps>;
-  farmName: string;
   description: string;
   producer: any;
   price: string;
-  button: string;
 }
 
-export function Details({ name, producer, description, price }: DetailsProps) {
+export function Details({ name, description, price, producer }: DetailsProps) {
   const navigation = useNavigation();
   const { buyButton } = useTexts();
 
   return (
     <>
       <CustomText style={styles.name}>{name}</CustomText>
+
       <View style={styles.farm}>
         <Image source={producer.image} style={styles.farmImage} />
+
         <CustomText style={styles.nameFarm}>{producer.name}</CustomText>
       </View>
+
       <CustomText style={styles.description}>{description}</CustomText>
+
       <CustomText style={styles.price}>{price}</CustomText>
 
       <TouchableOpacity

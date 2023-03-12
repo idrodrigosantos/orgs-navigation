@@ -1,9 +1,8 @@
-import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { Basket } from '@/screens/Basket';
 import { Home } from '@/screens/Home';
 import { Producer } from '@/screens/Producer';
-import { Basket } from '@/screens/Basket';
 import { Summary } from '@/screens/Summary';
 
 const Stack = createNativeStackNavigator();
