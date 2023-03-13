@@ -59,7 +59,7 @@ export function Producers({ bestProducers }) {
           }}
         />
       )}
-      keyExtractor={({ nome }) => nome}
+      keyExtractor={({ name }) => name}
       ListHeaderComponent={TopList}
       style={styles.list}
     />

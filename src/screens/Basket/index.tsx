@@ -19,7 +19,7 @@ export function Basket() {
       <FlatList
         data={items}
         renderItem={Item}
-        keyExtractor={({ nome }) => nome}
+        keyExtractor={({ name }) => name}
         ListHeaderComponent={() => {
           return (
             <>
